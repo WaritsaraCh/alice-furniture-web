@@ -1,28 +1,24 @@
-import type { Metadata } from 'next';
-import './globals.css';
-import { CartProvider } from '../context/CartContext';
-import { Header } from '../components/Header';
-import { Footer } from '../components/Footer';
-
-export const metadata: Metadata = {
-  title: 'Alice Furniture Land',
-  description: 'Modern Furniture for Modern Living',
-};
+import { Header } from "@/components/shared/Header"
+import "./globals.css"
+import { CartProvider } from "@/features/cart/cart.context"
+import { Footer } from "@/components/shared/Footer"
 
 export default function RootLayout({
   children,
 }: {
-  children: React.ReactNode;
+  children: React.ReactNode
 }) {
   return (
     <html lang="en">
-      <body>
+      <body className="min-h-screen flex flex-col">
         <CartProvider>
           <Header />
-          {children}
+          <main className="flex-1">
+            {children}
+          </main>
           <Footer />
         </CartProvider>
       </body>
     </html>
-  );
+  )
 }
