@@ -8,10 +8,10 @@ export type CartItem = {
 
 export type CartContextType = {
   cart: CartItem[]
+  totalPrice: number
+  totalItems: number
   addToCart: (product: ProductProps, quantity?: number) => void
   removeFromCart: (productId: number) => void
   updateQuantity: (productId: number, quantity: number) => void
   clearCart: () => void
-  getCartTotal: () => number
-  getCartCount: () => number
 }

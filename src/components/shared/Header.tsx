@@ -8,7 +8,7 @@ import { useCart } from '@/features/cart/cart.context';
 
 export function Header() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
-  const { getCartCount } = useCart();
+  const { totalItems } = useCart();
   return (
     <header className="bg-white w-full sticky top-0 z-50 shadow-sm">
       <div className="container mx-auto px-4 py-4 flex items-center justify-between">
@@ -60,7 +60,7 @@ export function Header() {
 
             <ShoppingCartIcon size={20} />
             <span className="absolute -top-2 -right-2 bg-amber-600 text-white text-xs rounded-full h-5 w-5 flex items-center justify-center">
-              {getCartCount()}
+              {totalItems}
             </span>
           </Link>
           <button

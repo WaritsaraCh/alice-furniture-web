@@ -127,7 +127,7 @@ export const allProducts: ProductProps[] = [
     name: "Mid-Century TV Stand",
     price: 449,
     image:
-      "https://images.unsplash.com/photo-1593642632823-8f78536788c6?auto=format&fit=crop&w=1170&q=80",
+      "https://m.media-amazon.com/images/I/81Ht0R187oL.jpg",
     category: "Living Room",
   },
   {
